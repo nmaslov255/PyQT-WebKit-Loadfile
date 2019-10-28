@@ -31,9 +31,10 @@ function processFiles(files) {
     var reader = new FileReader();
     reader.onload = function (e) {
         var loader = document.getElementById("loader");
-        var box    = document.getElementById("image_box");
+        var imgBox = document.getElementById("image");
 
-        box.style.backgroundImage = "url('" + e.target.result + "')";
+        imgBox.style.backgroundImage = "url('" + e.target.result + "')";
+        imgBox.style.display = "block";
         loader.style.display = 'none';
     };
 
