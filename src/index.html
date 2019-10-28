@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>load file</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="wrapper">
-    <form class="box content" method="post" action="" enctype="multipart/form-data">
-        <div class="box__input">
-            <input class="box__file" type="file" name="files[]" 
-            id="file" data-multiple-caption="{count} files selected" multiple />
 
-            <div class="loadfile">
-                <image class="icon icon-loadfile" src="img/loadfile.svg">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <form class="box content" id="drop_box" method="post" action="" enctype="multipart/form-data">
+        <div class="box__input" id="image_box">
+            <input class="box__file" type="file" onchange="processFiles(this.files)" id="file" />
+
+            <div id="loader">
+                <div class="loadfile">
+                    <img class="icon icon-loadfile" src="img/loadfile.svg" />
+                </div>
+
+                <label for="file">
+                    <strong class="select_file">Выберите фото</strong>
+                    <span class="box__dragndrop"> или перетащите его сюда</span>
+                </label>
+
+                <div class="box__error" id="error">
+                    <span class="error">Файл должен быть изображением</span>
+                </div>
             </div>
-            <label for="file">
-                <strong class="select_file">Выберите файл</strong>
-                <span class="box__dragndrop"> или перетащите его сюда</span>
-            </label>
-            <button class="box__button" type="submit">Загрузить</button>
-        </div>
-        <div class="box__uploading">Загружаю&hellip;</div>
-        <div class="box__success">Загруженно</div>
-        <div class="box__error">Ошибка<span></span>.</div>
+        </div> 
     </form> 
-    </div>
 </body>
 </html>

@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import QApplication
 app = QApplication(sys.argv)
  
 web = QWebEngineView()
-web.load(QUrl("file://" + os.path.abspath('src/index.html')))
+web.load(QUrl.fromLocalFile(os.path.abspath('src/index.html')))
 web.show()
  
 sys.exit(app.exec_())
