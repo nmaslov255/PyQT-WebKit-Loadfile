@@ -36,6 +36,8 @@ function processFiles(files) {
         imgBox.style.backgroundImage = "url('" + e.target.result + "')";
         imgBox.style.display = "block";
         loader.style.display = 'none';
+
+        document.getElementById('form').files = files;
     };
 
     reader.readAsDataURL(file);
