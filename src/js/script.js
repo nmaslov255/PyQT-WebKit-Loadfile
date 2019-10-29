@@ -40,3 +40,15 @@ function processFiles(files) {
 
     reader.readAsDataURL(file);
 }
+
+function sendMe(e) {    
+    var form = document.getElementById('form');
+
+    if (form.files.length > 0) {
+        saveAs(form.files[0]);
+    } else {
+        console.log('no');
+    }
+
+}
+

@@ -5,30 +5,33 @@
     <title>load file</title>
 
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/node_modules/file-saver/dist/FileSaver.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 
 <body>
     <form class="box content" id="drop_box" method="post" action="" enctype="multipart/form-data">
         <div class="wrapper">
-                <div class="box__input" id="image_box">
-                    <input class="box__file" type="file" onchange="processFiles(this.files)" id="file" />
-                    <div id="image"></div>
-                    <div id="loader">
-                        <div class="loadfile">
-                            <img class="icon icon-loadfile" src="img/loadfile.svg" />
-                        </div>
-
-                        <label for="file">
-                            <strong class="select_file">Выберите фото</strong>
-                            <span class="box__dragndrop"> или перетащите его сюда</span>
-                        </label>
-
-                        <div class="box__error" id="error">
-                            <span class="error">Файл должен быть изображением</span>
-                        </div>
+            <div class="box__input" id="image_box">
+                <input class="box__file" type="file" onchange="processFiles(this.files)" id="form" />
+                <div id="image"></div>
+                <div id="loader">
+                    <div class="loadfile">
+                        <img class="icon icon-loadfile" src="img/loadfile.svg" />
                     </div>
-                </div> 
+
+                    <label for="form">
+                        <strong class="select_file">Выберите фото</strong>
+                        <span class="box__dragndrop"> или перетащите его сюда</span>
+                    </label>
+
+                    <div class="box__error" id="error">
+                        <span class="error">Файл должен быть изображением</span>
+                    </div>
+                </div>
+
+                <label class="box__button" onclick="sendMe(this)">Сохранить</label>    
+            </div> 
         </div>
     </form>
 </body>

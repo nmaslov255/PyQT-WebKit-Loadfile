@@ -34,9 +34,9 @@ button {
     font-weight: 700;
     color: #e5edf1;
     background-color: #39bfd3;
-    display: block;
+    display: inline-block;
     padding: 8px 16px;
-    margin: 40px auto 0;
+    margin: 10px auto 0;
     border: 0px;
 }
 
