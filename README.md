@@ -6,5 +6,7 @@
 5. pip3 install -r requirements.txt
 6. python3 main.py
 
-![Shell](https://github.com/nmaslov255/hostfiles/blob/master/WebKit-Loadfile-before.png?raw=true)
-![Shell](https://github.com/nmaslov255/hostfiles/blob/master/WebKit-Loadfile-after.png?raw=true)
+![Shell](https://github.com/nmaslov255/hostfiles/blob/master/webkit-1.png?raw=true)
+![Shell](https://github.com/nmaslov255/hostfiles/blob/master/webkit-2.png?raw=true)
+![Shell](https://github.com/nmaslov255/hostfiles/blob/master/webkit-3.png?raw=true)
+![Shell](https://github.com/nmaslov255/hostfiles/blob/master/webkit-4.png?raw=true)
