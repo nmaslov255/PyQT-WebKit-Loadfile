@@ -37,16 +37,19 @@ function processFiles(files) {
 
         switch (file.type) {
             case "image/jpeg":
-                var loader = document.getElementById("loader");
-                var imgBox = document.getElementById("image");
+                var imgBox = document.getElementById("image_view");
 
                 imgBox.style.backgroundImage = "url('" + e.target.result + "')";
                 imgBox.style.display = "block";
-                loader.style.display = 'none';
-            break;
 
             default:
-                console.log('other type');
+                document.getElementById("loader").style.display = 'none';
+
+                var fileView = document.getElementById('file_view');
+                
+                fileView.style.display = 'block';
+                fileView.querySelector("#filename").innerText = file.name;
+
         }
 
         document.getElementById('form').files = files;
