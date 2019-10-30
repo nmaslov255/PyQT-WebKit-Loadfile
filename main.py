@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     web = QWebEngineView()
 
-    web.load(QUrl.fromLocalFile(os.path.abspath('src/index.html')))
+    web.load(QUrl.fromLocalFile(os.path.abspath('frontend/index.html')))
     web.page().profile().downloadRequested.connect(_downloadRequested)
     web.show()
 

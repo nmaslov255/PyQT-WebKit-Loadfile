@@ -13,7 +13,7 @@
     <form class="box content" id="drop_box" method="post" action="" enctype="multipart/form-data">
         <div class="wrapper">
             <div class="box__input" id="image_box">
-                <input class="box__file" type="file" onchange="processFiles(this.files)" id="form" />
+                <input class="box__file" type="file" id="form" />
                 <div id="image"></div>
                 <div id="loader">
                     <div class="loadfile">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <label class="box__button" onclick="sendMe(this)">Сохранить</label>    
+                <label class="box__button" id="saveBtn">Сохранить</label>    
             </div> 
         </div>
     </form>
