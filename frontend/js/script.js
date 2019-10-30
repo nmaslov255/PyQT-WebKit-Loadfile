@@ -1,6 +1,4 @@
 (function(){
-    window.downloading = 
-
     window.onload = function() {
         var ignoreDrag = function (e) {
             e.stopPropagation();
