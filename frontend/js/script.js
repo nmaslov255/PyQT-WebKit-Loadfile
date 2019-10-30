@@ -1,4 +1,6 @@
 (function(){
+    window.downloading = 
+
     window.onload = function() {
         var ignoreDrag = function (e) {
             e.stopPropagation();
@@ -44,6 +46,7 @@ function processFiles(files) {
 
             default:
                 document.getElementById("loader").style.display = 'none';
+                document.getElementById('saveBtn').style.display = 'inline-block';
 
                 var fileView = document.getElementById('file_view');
                 
@@ -65,5 +68,13 @@ function loadFiles(e) {
 function saveFiles(files) {
     if (form.files.length > 0) {
         saveAs(form.files[0]);
+        
+        // так делать нельзя, просто нехочу заморачиваться
+        setTimeout(function() {
+            document.getElementById('success').style.display = 'block';
+            document.getElementById('image_view').style.display = 'none';
+            document.getElementById('saveBtn').style.display = 'none';      
+        }, 1000);
+      
     }
 }

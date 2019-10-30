@@ -86,6 +86,19 @@ form.box {
     display: none;
 }
 
+#success {
+    color: green;
+    display: none;
+}
+
+#saveBtn {
+    display: none;
+}
+
+.box__success img {
+    width: 50px;
+}
+
 .wrapper {
     display: table;
     width: 100%;
