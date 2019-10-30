@@ -39,7 +39,7 @@ function processFiles(files) {
             case "image/jpeg":
                 var imgBox = document.getElementById("image_view");
 
-                imgBox.style.backgroundImage = "url('" + e.target.result + "')";
+                imgBox.lastChild.src = e.target.result;
                 imgBox.style.display = "block";
 
             default:
